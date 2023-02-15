@@ -40,8 +40,11 @@ INSTALLED_APPS = [
 
     'corsheaders',
     'rest_framework',
+    'rest_framework.authtoken',
+    'djoser',
 
     # apps
+    'forms',
 ]
 
 MIDDLEWARE = [
@@ -74,6 +77,12 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'eca.wsgi.application'
 
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',
+    ),
+}
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
