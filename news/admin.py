@@ -1,0 +1,13 @@
+from django.contrib import admin
+
+from .models import *
+# Register your models here.
+
+class NewsAdmin(admin.ModelAdmin):
+    list_display = ('title',)
+
+class NewImageAdmin(admin.ModelAdmin):
+    list_display = ('new',)
+
+admin.site.register(News, NewsAdmin)
+admin.site.register(NewImages, NewImageAdmin)
