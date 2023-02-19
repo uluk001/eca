@@ -12,5 +12,5 @@ class News(models.Model):
         return f'{self.title}'
 
 class NewImages(models.Model):
-    new = models.ForeignKey(to=News, on_delete=models.CASCADE)
+    news = models.ForeignKey(to=News, on_delete=models.CASCADE)
     image = models.ImageField(upload_to='news', verbose_name='Изображение')
