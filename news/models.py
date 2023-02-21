@@ -1,10 +1,11 @@
 from django.db import models
+from django_quill.fields import QuillField
 
 # Create your models here.
 
 class News(models.Model):
     title = models.CharField(max_length=775, verbose_name='Заголовок')
-    content = models.TextField(verbose_name='Контент')
+    content = QuillField()
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Опубликовано в:')
     main_image = models.ImageField(upload_to='news/main_image', verbose_name='Изображение')
 

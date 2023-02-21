@@ -1,9 +1,10 @@
 from django.db import models
+from django_quill.fields import QuillField
 
 class Services(models.Model):
     title = models.CharField(max_length=255, verbose_name='Название')
     image = models.ImageField(verbose_name='Изображение', upload_to='services', null=True, blank=True)
-    description = models.TextField(verbose_name='Описание')
+    description = QuillField()
     created_at = models.DateTimeField(verbose_name='Добавлено в', auto_now_add=True)
 
     def __str__(self) -> str:
