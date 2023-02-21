@@ -1,4 +1,5 @@
 from django.db import models
+from django_quill.fields import QuillField
 
 # Create your models here.
 class Project(models.Model):
@@ -28,4 +29,4 @@ class Project(models.Model):
     sector = models.CharField(max_length=255, choices=SECTOR_LIST, verbose_name='Сектор')
     month = models.CharField(choices=MONTH_LIST, verbose_name='Месяц', max_length=255)
     year = models.IntegerField(verbose_name='Год')
-    projects_detail = models.TextField(max_length=255, verbose_name='Детали проекта')
+    projects_detail = QuillField()
