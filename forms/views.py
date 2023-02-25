@@ -51,5 +51,5 @@ class CreateResumeView(APIView):
                 email=request.data.get('email'),
                 resume=request.data.get('resume')
             )
-            return Response({'answer':'complete'})
+            return Response({'reply':'Your Resume / CV was successfully sent. Our staff will contact you as soon as possible'})
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

@@ -25,6 +25,7 @@ schema_view = get_schema_view(
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('forms/', include('forms.urls')),
+    path('members/', include('associated_aca_memebers.urls')),
     path('projects/', include('projects.urls')),
     path('news/', include('news.urls')),
     path('services/', include('our_services.urls')),
@@ -34,7 +35,6 @@ urlpatterns = [
     re_path(r'^swagger/$', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
     re_path(r'^redoc/$', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
 ]
-
 
 
 urlpatterns += static(MEDIA_URL, document_root=MEDIA_ROOT)

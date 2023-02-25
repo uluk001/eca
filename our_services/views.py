@@ -14,3 +14,11 @@ class ServicesIncludeView(generics.ListAPIView):
     def get_queryset(self):
         service = Services.objects.get(id=self.kwargs['id'])
         return ServicesInclude.objects.filter(service=service)
+
+
+class ServicesRetrieveView(generics.ListAPIView):
+    serializer_class = ServicesSerializer
+
+    def get_queryset(self):
+        service = Services.objects.get(id=self.kwargs['id'])
+        return service

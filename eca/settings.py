@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'projects',
     'news',
     'our_services',
+    'associated_aca_memebers',
 ]
 
 MIDDLEWARE = [
@@ -137,6 +138,8 @@ STATICFILES_DIRS = [
 ]
 
 STATIC_URL = '/static/'
+
+STATIC_ROOT = 'static/static'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
