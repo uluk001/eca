@@ -3,20 +3,20 @@ from django_quill.fields import QuillField
 
 # Create your models here.
 class Project(models.Model):
-    MONTH_LIST = (
-        ('January', 'January'),
-        ('February', 'February'),
-        ('March', 'March'),
-        ('April', 'April'),
-        ('May', 'May'),
-        ('June', 'June'),
-        ('July', 'July'),
-        ('August', 'August'),
-        ('September', 'September'),
-        ('October', 'October'),
-        ('November', 'November'),
-        ('December', 'December'),
-    )
+    # MONTH_LIST = (
+    #     ('January', 'January'),
+    #     ('February', 'February'),
+    #     ('March', 'March'),
+    #     ('April', 'April'),
+    #     ('May', 'May'),
+    #     ('June', 'June'),
+    #     ('July', 'July'),
+    #     ('August', 'August'),
+    #     ('September', 'September'),
+    #     ('October', 'October'),
+    #     ('November', 'November'),
+    #     ('December', 'December'),
+    # )
     SECTOR_LIST = (
         ('Public','Public'),
         ('Private','Private'),
@@ -27,6 +27,7 @@ class Project(models.Model):
     financing_agency = models.CharField(max_length=255, verbose_name='Финансовое агентство')
     country = models.CharField(max_length=255, verbose_name='Страна')
     sector = models.CharField(max_length=255, choices=SECTOR_LIST, verbose_name='Сектор')
-    month = models.CharField(choices=MONTH_LIST, verbose_name='Месяц', max_length=255)
+    month = models.CharField(verbose_name='Месяц', max_length=255)
     year = models.IntegerField(verbose_name='Год')
     projects_detail = QuillField()
+    client = models.ForeignKey(to='clients.OurClients', on_delete=models.CASCADE, verbose_name='Клиент')
