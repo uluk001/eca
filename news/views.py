@@ -23,26 +23,6 @@ class LatestNews(generics.ListAPIView):
         return News.objects.all().order_by('-created_at')[:3]
 
 
-# En 
-
-class NewsListView(generics.ListAPIView):
-    queryset = News.objects.all()
-    serializer_class = NewsSerializerEn
-
-
-class NewsRetrieveView(generics.RetrieveAPIView):
-    queryset = News.objects.all()
-    serializer_class = NewsSerializerEn
-
-
-class LatestNews(generics.ListAPIView):
-    serializer_class = NewsSerializerEn
-
-    def get_queryset(self):
-        return News.objects.all().order_by('-created_at')[:3]
-
-
-
 class NewImagesView(generics.ListAPIView):
     serializer_class = NewImagesSerializer
 

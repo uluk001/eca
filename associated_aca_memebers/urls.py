@@ -1,11 +1,7 @@
 from django.urls import path
-from .views import MembersView, MembersViewEn
+from .views import MembersView
 
 
 urlpatterns = [
-    # ru
-    path('ru/list/', MembersView.as_view()),
-
-    # en
-    path('en/list/', MembersViewEn.as_view()),
+    path('list/', MembersView.as_view()),
 ]
