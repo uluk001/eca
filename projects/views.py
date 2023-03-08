@@ -1,6 +1,7 @@
 from rest_framework import generics
 from .serializers import *
 from .models import *
+from clients.models import OurClients
 
 
 # Projects list
@@ -42,3 +43,13 @@ class FilterBySector(generics.ListAPIView):
     def get_queryset(self):
         sector = self.kwargs['sector']
         return Project.objects.filter(sector=sector)
+
+
+# Filter by clients 
+class FilterByClients(generics.ListAPIView):
+    serializer_class = ProjectSerializer
+
+    def get_queryset(self):
+        client_id = self.kwargs['id']
+        client = OurClients.objects.get(id=client_id)
+        return Project.objects.filter(client=client)

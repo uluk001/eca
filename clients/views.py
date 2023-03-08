@@ -2,8 +2,6 @@ from .models import Category, OurClients
 from .serializers import *
 from rest_framework import generics
 
-# Ru 
-
 class CategoryView(generics.ListAPIView):
     serializer_class = CategorySerializer
     queryset = Category.objects.all()
@@ -16,6 +14,12 @@ class OurClientsView(generics.ListAPIView):
     serializer_class = OurClientsSerializer
 
     def get_queryset(self):
-        category = Category.objects.get(id = self.request.kwargs['id'])
+        category = Category.objects.get(id = self.kwargs['id'])
         queryset = OurClients.objects.filter(category=category)
         return queryset
+
+
+class OurClientsListView(generics.ListAPIView):
+
+    serializer_class = OurClientsSerializer
+    queryset = OurClients.objects.all()

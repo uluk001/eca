@@ -16,4 +16,4 @@ class OurClients(models.Model):
     category = models.ForeignKey(to=Category, on_delete=models.CASCADE, verbose_name='Категория')
 
     def __str__(self) -> str:
-        return f'{self.category}'
+        return f'{self.сompany_name}'
