@@ -2,6 +2,7 @@ from django.shortcuts import render
 from rest_framework import generics
 from .serializers import *
 from .models import *
+from .paginators import CustomPagination
 # Create your views here.
 
 # Ru 
@@ -9,6 +10,7 @@ from .models import *
 class NewsListView(generics.ListAPIView):
     queryset = News.objects.all()
     serializer_class = NewsSerializer
+    pagination_class = CustomPagination
 
 
 class NewsRetrieveView(generics.RetrieveAPIView):

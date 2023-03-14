@@ -2,12 +2,13 @@ from rest_framework import generics
 from .serializers import *
 from .models import *
 from clients.models import OurClients
-
+from .paginators import CustomPagination
 
 # Projects list
 class ProjectListView(generics.ListAPIView):
     queryset = Project.objects.all()
     serializer_class = ProjectSerializer
+    pagination_class = CustomPagination
 
 
 # Searcher

@@ -1,5 +1,5 @@
 from django.urls import path, re_path
-from projects.views import SearchProject, FilterBySector, ListOfYearsView, FilterByYear, ProjectListView, FilterByClients
+from projects.views import SearchProject, FilterBySector, FilterByYear, ProjectListView, FilterByClients
 
 
 urlpatterns = [
