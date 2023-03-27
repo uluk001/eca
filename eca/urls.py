@@ -30,6 +30,7 @@ urlpatterns = [
     path('projects/', include('projects.urls')),
     path('news/', include('news.urls')),
     path('services/', include('our_services.urls')),
+    path('video/', include('video.urls')),
 
     # swagger
     re_path(r'^swagger(?P<format>\.json|\.yaml)$', schema_view.without_ui(cache_timeout=0), name='schema-json'),

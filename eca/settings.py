@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'news',
     'our_services',
     'associated_aca_memebers',
+    'video',
 ]
 
 MIDDLEWARE = [
