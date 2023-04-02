@@ -157,7 +157,7 @@ STATIC_IP = '/static/'
 
 STATIC_ROOT = 'static/static'
 
-MEDIA_URL = '/media/'
+MEDIA_IP = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
