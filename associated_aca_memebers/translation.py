@@ -3,4 +3,9 @@ from .models import *
 
 @register(Members)
 class MembersTranslationOptions(TranslationOptions):
-    fields = ('description', 'ecas_role')
+    fields = ('description',)
+
+
+@register(EcasRole)
+class EcasRoleTranslationOptions(TranslationOptions):
+    fields = ('title',)
