@@ -1,7 +1,6 @@
 from rest_framework import serializers
-from .models import Category, OurClients
+from .models import Category, OurClients, PartnerImage
 
-# Ru
 
 class CategorySerializer(serializers.ModelSerializer):
 
@@ -9,6 +8,12 @@ class CategorySerializer(serializers.ModelSerializer):
         model = Category
         fields = '__all__'
 
+
+class PartnerImageSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = PartnerImage
+        fields = '__all__'
 
 class OurClientsSerializer(serializers.ModelSerializer):
 

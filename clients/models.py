@@ -17,3 +17,11 @@ class OurClients(models.Model):
 
     def __str__(self) -> str:
         return f'{self.сompany_name}'
+    
+
+class PartnerImage(models.Model):
+    title = models.CharField(max_length=255, verbose_name='Компания')
+    image = models.ImageField(upload_to='clients', verbose_name='Изображение')
+
+    def __str__(self) -> str:
+        return f'{self.title}'
