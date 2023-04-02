@@ -17,5 +17,5 @@ class Project(models.Model):
     month = models.CharField(verbose_name='Месяц', max_length=255)
     year = models.IntegerField(verbose_name='Год')
     projects_detail = QuillField()
-    client = models.ForeignKey(to='clients.OurClients', on_delete=models.CASCADE, verbose_name='Клиент')
-    clients_logo = models.ImageField(upload_to='clients_logo', verbose_name='Логотип клиента')
+    client = models.ForeignKey(to='clients.OurClients', on_delete=models.CASCADE, verbose_name='Клиент', null=True, blank=True)
+    clients_logo = models.ImageField(upload_to='clients_logo', verbose_name='Логотип клиента', null=True, blank=True)
