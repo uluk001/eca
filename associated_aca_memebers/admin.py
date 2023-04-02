@@ -3,7 +3,7 @@ from .models import Members, EcasRole
 
 
 class EcasRoleInline(admin.TabularInline):
-    model = EcasRole
+    model= EcasRole
 
 @admin.register(Members)
 class MembersAdmin(admin.ModelAdmin):
