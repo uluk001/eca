@@ -1,7 +1,10 @@
 from django.contrib import admin
-from .models import Members
+from .models import Members, EcasRole
 
+
+class EcasRoleInline(admin.TabularInline):
+    model = EcasRole
+
+@admin.register(Members)
 class MembersAdmin(admin.ModelAdmin):
-    list_display = ('ecas_role', )
-
-admin.site.register(Members, MembersAdmin)
+    inlines = [EcasRoleInline]
