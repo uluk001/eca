@@ -1,0 +1,5 @@
+SECRET_KEY = 'django-insecure-s26e0#&jf%9-%h&bfx0i*ps#&v6em1b8t+o0d(-5sbhj6(p#x!'
+DB_NAME = 'eca'
+DB_USER = 'eca_user'
+DB_PASSWORD = 'eca_user!123#123'
+DB_HOST = 'localhost'
