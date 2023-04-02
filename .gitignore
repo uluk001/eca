@@ -1,5 +1,6 @@
 venv
 local_settings
+/local_settings
 .local_settings
 
 # Byte-compiled / optimized / DLL files
