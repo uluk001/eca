@@ -1,7 +1,7 @@
 venv
-local_settings
-/local_settings
-.local_settings
+local_settings.py
+/local_settings.py
+.local_settings.py
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
