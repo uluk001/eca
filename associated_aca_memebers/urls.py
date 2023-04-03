@@ -1,8 +1,7 @@
-from django.urls import path, re_path
-from .views import MembersView, EcasRoleView
+from django.urls import path
+from .views import MembersView
 
 
 urlpatterns = [
     path('list/', MembersView.as_view()),
-    re_path('ecas_role/(?P<id>.+)/$', EcasRoleView.as_view()),
 ]

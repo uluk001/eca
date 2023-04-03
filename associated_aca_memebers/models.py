@@ -9,4 +9,3 @@ class Members(models.Model):
 class EcasRole(models.Model):
     member = models.ForeignKey(to=Members, on_delete=models.CASCADE)
     title = QuillField(verbose_name='As eca expert was envoled', null=True, blank=True)
-

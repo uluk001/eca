@@ -21,7 +21,6 @@ class MembersSerializer(serializers.ModelSerializer):
         return str(obj.description_en.html)
     
 
-    
 class EcasRoleSerializer(serializers.ModelSerializer):
 
     title = serializers.SerializerMethodField()

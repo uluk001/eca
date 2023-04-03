@@ -12,8 +12,8 @@ class Category(models.Model):
 class OurClients(models.Model):
     сompany_name = models.CharField(max_length=255, verbose_name='Название компании')
     content = QuillField(verbose_name='Контент')
-    image = models.ImageField(upload_to='clients', verbose_name='Изображение', null=True, blank=True)
-    category = models.ForeignKey(to=Category, on_delete=models.CASCADE, verbose_name='Категория', null=True, blank=True)
+    image = models.ImageField(upload_to='clients', verbose_name='Изображение')
+    category = models.ForeignKey(to=Category, on_delete=models.CASCADE, verbose_name='Категория')
 
     def __str__(self) -> str:
         return f'{self.сompany_name}'
