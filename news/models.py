@@ -6,7 +6,7 @@ from django_quill.fields import QuillField
 class News(models.Model):
     title = models.CharField(max_length=775, verbose_name='Заголовок')
     content = QuillField()
-    created_at = models.DateTimeField(auto_now_add=True, verbose_name='Опубликовано в:')
+    created_at = models.DateTimeField(verbose_name='Опубликовано в:')
     main_image = models.ImageField(upload_to='news/main_image', verbose_name='Изображение', null=True, blank=True)
 
     def __str__(self):
