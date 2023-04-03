@@ -49,11 +49,11 @@ INSTALLED_APPS = [
 
     # apps
     'forms',
+    'associated_aca_memebers',
     'clients',
     'projects',
     'news',
     'our_services',
-    'associated_aca_memebers',
     'video',
 ]
 
