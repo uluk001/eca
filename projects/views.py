@@ -6,7 +6,7 @@ from .paginators import CustomPagination
 
 # Projects list
 class ProjectListView(generics.ListAPIView):
-    queryset = Project.objects.all().order_by('-year')
+    queryset = Project.objects.all().order_by('-year' )
     serializer_class = ProjectSerializer
     pagination_class = CustomPagination
 
