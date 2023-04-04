@@ -10,7 +10,7 @@ class ProjectListView(generics.ListAPIView):
     serializer_class = ProjectSerializer
     pagination_class = CustomPagination
 
-
+# ff
 # Searcher
 class SearchProject(generics.ListAPIView):
     serializer_class = ProjectSerializer
