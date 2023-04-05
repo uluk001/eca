@@ -7,7 +7,7 @@ from .paginators import CustomPagination
 
 
 class NewsListView(generics.ListAPIView):
-    queryset = News.objects.all().order_by('created_at')
+    queryset = News.objects.all().order_by('-created_at')
     serializer_class = NewsSerializer
     pagination_class = CustomPagination
 
