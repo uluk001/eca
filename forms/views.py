@@ -10,23 +10,14 @@ from rest_framework.parsers import FileUploadParser
 from rest_framework import views
 
 
-# class ContactView(ModelViewSet):
-#     queryset = Contact.objects.all()
-#     serializer_class = ContactSerializer
-#     permission_classes = [IsAuthenticated]
-#     def create(self, request):
-#         pass
-
 
 class CreateContactView(generics.CreateAPIView):
     queryset = Contact.objects.all()
     serializer_class = ContactSerializer
 
-
-# class CreateResumeView(generics.CreateAPIView):
-#     queryset = Resume.objects.all()
-#     serializer_class = ResumeSerializer
     
+    
+
 
 class CreateResumeView(APIView):
     parser_classes = (FormParser, MultiPartParser)

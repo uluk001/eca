@@ -26,3 +26,4 @@ class NewImagesSerializer(serializers.ModelSerializer):
     class Meta:
         model = NewImages
         fields = ('image',)
+
